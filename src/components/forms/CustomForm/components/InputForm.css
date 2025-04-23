@@ -1,0 +1,14 @@
+.is-invalid {
+  color: red;
+}
+
+.error {
+  color: red;
+  max-width: 200px;
+  margin-top: 0.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}

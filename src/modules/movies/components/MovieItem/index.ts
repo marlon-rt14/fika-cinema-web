@@ -1,0 +1,6 @@
+export * from './MovieItem'
+export * from './Rate'
+export * from './Pill'
+export * from './Overview'
+export * from './Title'
+export * from './Genres'

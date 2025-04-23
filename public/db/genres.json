@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "All"
+  },
+  {
+    "id": 2,
+    "name": "Adventure"
+  },
+  {
+    "id": 3,
+    "name": "Animation"
+  },
+  {
+    "id": 4,
+    "name": "Biography"
+  },
+  {
+    "id": 5,
+    "name": "Comedy"
+  },
+  {
+    "id": 6,
+    "name": "Crime"
+  },
+  {
+    "id": 7,
+    "name": "Drama"
+  },
+  {
+    "id": 8,
+    "name": "Family"
+  },
+  {
+    "id": 9,
+    "name": "Fantasy"
+  },
+  {
+    "id": 10,
+    "name": "History"
+  },
+  {
+    "id": 11,
+    "name": "Action"
+  }
+]

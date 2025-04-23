@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Poppins", "Roboto", sans-serif;
+}
+
+:root {
+  /* Brand colors */
+  --brand-primary-blue: #103c6b;
+  --brand-primary-violet: #370665;
+
+  /* Gradient colors */
+  --linear-gradient-main: linear-gradient(to bottom, var(--brand-primary-violet), var(--brand-primary-blue));
+
+  /* Complementary colors */
+  --comp-yellow: #eab308;
+  --comp-purple: #6c6daa;
+  --comp-green: #22a386;
+  --comp-neutral: #d5d7db;
+  --comp-gray: #94a3b8;
+  --comp-blue: #2c62c9;
+  --comp-red: #de5272;
+  --comp-brown: #9a8f8f;
+  
+  /* Semantic colors */
+  --semantic-success: var(--comp-green);
+  --semantic-error: var(--comp-red);
+  --semantic-warning: var(--comp-yellow);
+  --semantic-info: var(--comp-blue);
+}
+
+@theme {
+  /* Theme brand colors */
+  --color-brand-primary-blue: var(--brand-primary-blue);
+  --color-brand-primary-violet: var(--brand-primary-violet);
+
+  /* Theme gradient colors */
+  --color-linear-gradient-main: var(--linear-gradient-main);
+
+  /* Theme complementary colors */
+  --color-comp-yellow: var(--comp-yellow);
+  --color-comp-purple: var(--comp-purple);
+  --color-comp-green: var(--comp-green);
+  --color-comp-neutral: var(--comp-neutral);
+  --color-comp-gray: var(--comp-gray);
+  --color-comp-blue: var(--comp-blue);
+  --color-comp-red: var(--comp-red);
+  --color-comp-brown: var(--comp-brown);
+  
+  /* Theme semantic colors */
+  --color-semantic-success: var(--semantic-success);
+  --color-semantic-error: var(--semantic-error);
+  --color-semantic-warning: var(--semantic-warning);
+  --color-semantic-info: var(--semantic-info);
+
+  /* Responsive text */
+  --text-responsive-xs: clamp(0.5rem, 1vw, 0.75rem);
+  --text-responsive-sm: clamp(0.75rem, 1.5vw, 1rem);
+  --text-responsive-md: clamp(1rem, 2.5vw, 1.5rem);
+  --text-responsive-lg: clamp(1.5rem, 3vw, 2rem);
+  --text-responsive-xl: clamp(2rem, 4vw, 3rem);
+}
+
+/* Personalizar el scrollbar */
+*::-webkit-scrollbar {
+  width: 5px; 
+  height: 3px; 
+}
+
+body::-webkit-scrollbar {
+  width: 8px; 
+  height: 3px; 
+}
+
+/* Fondo del scrollbar (track) */
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+/* Barra del scroll (thumb) */
+*::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+/* Efecto hover en el thumb */
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+

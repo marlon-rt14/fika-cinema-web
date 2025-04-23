@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+.movie-item {
+  @apply rounded-2xl shadow-2xl shadow-white/10 relative cursor-pointer  transition-all ease-in-out duration-300
+  hover:scale-110 hover:shadow-white/20;
+  background-position: center;
+  background-size: cover;
+}
+
+.movie-item__content {
+  @apply rounded-2xl absolute p-5 h-full w-full text-center bg-black/15 backdrop-blur-[5px]
+  hover:backdrop-blur-[10px] transition-all ease-in-out duration-300 flex flex-col justify-between gap-3;
+}
+
+/* Personalizar el scrollbar */
+.wrapper-genres::-webkit-scrollbar {
+  width: 8px; 
+  height: 0px; 
+}
+
+/* Fondo del scrollbar (track) */
+.wrapper-genres::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+/* Barra del scroll (thumb) */
+.wrapper-genres::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+/* Efecto hover en el thumb */
+/* .wrapper-genres::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */

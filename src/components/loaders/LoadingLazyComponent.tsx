@@ -1,0 +1,11 @@
+interface IProps {
+  message?: string;
+}
+
+export const LoadingLazyComponent = ({ message = "Loading..." }: IProps) => {
+  return (
+    <div className="text-center">
+      <p className="text-gray-300">{message}</p>
+    </div>
+  );
+};
