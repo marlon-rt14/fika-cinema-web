@@ -1,2 +1,1 @@
-export * from "./useQueryGenres";
-export * from "./useGenreSelected";
+export * from "./useGenres";

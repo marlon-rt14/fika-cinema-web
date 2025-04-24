@@ -1,6 +1,6 @@
-import { Input } from "../../../components/common";
-import { ListCasts, MainLayout } from "../components";
-import { useQuery } from "../hooks";
+import { Input } from "@components";
+import { ListCasts, MainLayout } from "@admin/components";
+import { useQuery } from "@/modules/shared/hooks";
 
 export const Cast = () => {
   const { query, handleSearch } = useQuery("");

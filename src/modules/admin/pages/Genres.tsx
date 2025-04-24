@@ -1,6 +1,6 @@
-import { Input } from "../../../components/common";
-import { ListGenres, MainLayout } from "../components";
-import { useQuery } from "../hooks";
+import { Input } from "@components";
+import { ListGenres, MainLayout } from "@admin/components";
+import { useQuery } from "@/modules/shared/hooks";
 
 export const Genres = () => {
   const { query, handleSearch } = useQuery("");

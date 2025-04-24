@@ -1,7 +1,7 @@
-import { ICast } from "../../../cast/entities";
+import { Cast } from "@/modules/shared/interfaces";
 
 interface Props {
-  cast: ICast;
+  cast: Cast;
 }
 
 export const CastItem = ({ cast }: Props) => {

@@ -9,13 +9,13 @@ interface IItem {
   id: number;
 }
 
-interface IProps {
+interface Props {
   data: IItem[];
   selectedItem: IItem;
   setSelectedItem: (item: IItem) => void;
 }
 
-export const ListBox = memo(({ data, selectedItem, setSelectedItem }: IProps) => {
+export const ListBox = memo(({ data, selectedItem, setSelectedItem }: Props) => {
   return (
     <div className="max-w-52 z-50 select">
       <Listbox value={selectedItem} onChange={setSelectedItem}>

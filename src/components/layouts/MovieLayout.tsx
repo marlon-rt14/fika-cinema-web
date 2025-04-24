@@ -1,6 +1,6 @@
-import { Outlet } from "react-router";
-import { Header } from "../Partials";
-import { Main } from "./components";
+import { Outlet } from "@core/imports";
+import { Header } from "@components";
+import { Main } from "@components/layouts/components";
 
 export const MovieLayout = () => {
   return (

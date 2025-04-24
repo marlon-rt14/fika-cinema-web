@@ -1,12 +1,13 @@
-import { TableRow } from ".";
-import { EmptyList } from "../../../../components/Partials";
-import { LoaderTailChase } from "../../../../components/loaders/LoaderTailChase";
-import { useStoreQuery } from "../../../../store/useStoreQuery";
-import { filterByQuery } from "../../../../utils";
-import { useQueryMovies } from "../../../movies/hooks";
+import { EmptyList, LoaderTailChase } from "@/components";
+import { useMovies } from "@/modules/movies/hooks";
+import { filterByQuery } from "@/modules/shared/utils";
+import { useStoreQuery } from "@/store";
+import { TableRow } from "@admin/components/movies";
 
 export const TableRowBody = () => {
-  const { queryMovies, movies, handleUpdate, handleDelete } = useQueryMovies();
+  const { movieQueries } = useMovies();
+
+  const { movies, handleUpdate, handleDelete, moviesQuery } = movieQueries;
   const { query } = useStoreQuery();
 
   const filteredMovies = filterByQuery({ array: movies, predicate: "title", query });
@@ -15,7 +16,7 @@ export const TableRowBody = () => {
     return <EmptyList message="No movies available" />;
   }
 
-  if (queryMovies.isLoading) {
+  if (moviesQuery.isLoading) {
     return <LoaderTailChase />;
   }
 

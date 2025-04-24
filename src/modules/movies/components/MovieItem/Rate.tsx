@@ -1,10 +1,10 @@
-import { Star } from "../../../../assets/icons";
+import { Star } from "@/assets/icons";
 
-interface IProps {
+interface Props {
   rate: number;
 }
 
-export const Rate = ({ rate }: IProps) => {
+export const Rate = ({ rate }: Props) => {
   const stars = Array.from({ length: 5 }, (_, index) => index + 1);
 
   return (

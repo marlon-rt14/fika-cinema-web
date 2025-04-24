@@ -1,21 +1,22 @@
+import { useCallback, useEffect } from "@core/imports";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { InputForm, ListBoxForm } from "./components";
-import { ReactNode, useCallback, useEffect } from "react";
-import { schemaCreateMovie, TFormValues } from "../../../models";
-import { Button } from "../../common";
-import { useQueryGenres, useGenreSelected } from "../../../modules/genres/hooks";
-import { useGlobalCreateMovie, ValueType } from "../../../contexts/modals";
-import { useMutationMovies } from "../../../modules/movies/hooks";
-import { useQueryCasts } from "../../../modules/cast/hooks/useQueryCasts";
-import { useCastSelected } from "../../../modules/cast/hooks";
+import { InputForm, ListBoxForm, Button } from "@components";
+import { schemaCreateMovie, TFormValues } from "@movies/schemas";
+import { useGenres } from "@genres/hooks";
+import { useGlobalCreateMovie, ValueType } from "@contexts/modals/CreateMovie";
+import { useMovies } from "@movies/hooks";
+import { useCasts } from "@cast/hooks";
 
-interface IProps {
-  children?: ReactNode;
+interface Props {
+  children?: React.ReactNode;
   movie?: ValueType;
 }
 
-export const CustomForm = ({ children, movie }: IProps) => {
+export const CustomForm = ({ children, movie }: Props) => {
+  const { castsQuery, castSelected } = useCasts();
+  const { movieMutations } = useMovies();
+  const { genres, genreSelected } = useGenres();
   const { onClose } = useGlobalCreateMovie();
 
   const {
@@ -28,11 +29,10 @@ export const CustomForm = ({ children, movie }: IProps) => {
     mode: "onBlur",
   });
 
-  const { genres } = useQueryGenres();
-  const { casts } = useQueryCasts();
-  const { selectedGenres, handleChangeMultiple } = useGenreSelected(genres);
-  const { selectedCasts, handleChangeMultiple: handleChangeMultipleCast } = useCastSelected(casts);
-  const { createMovie, updateMovie } = useMutationMovies();
+  const { casts } = castsQuery;
+  const { selectedGenres, handleChangeMultiple } = genreSelected;
+  const { selectedCasts, handleChangeMultiple: handleChangeMultipleCast } = castSelected;
+  const { createMovie, updateMovie } = movieMutations;
 
   const onChangeGenres = useCallback(
     (items: { id: number; name: string }[]) => {

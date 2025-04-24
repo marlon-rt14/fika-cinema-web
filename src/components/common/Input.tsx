@@ -1,5 +1,3 @@
-import React from "react";
-
 type TInputProps = React.InputHTMLAttributes<HTMLInputElement>;
 
 export const Input = ({ type = "text", className = "", ...props }: TInputProps) => {

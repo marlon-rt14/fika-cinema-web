@@ -1,9 +1,9 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import { IGenre } from "../../../genres/entities";
-import { Pill } from ".";
+import { useCallback, useEffect, useRef, useState } from "@core/imports";
+import { Genre } from "@/modules/shared/interfaces";
+import { Pill } from "@movies/components";
 
 interface GenresProps {
-  genres: IGenre[];
+  genres: Genre[];
 }
 
 const SCROLL_ANIMATION_SPEED = 0.5;

@@ -1,14 +1,14 @@
+import { useState } from "@core/imports";
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
-import { ReactNode, useState } from "react";
-import { CustomForm } from "../../../components/forms/CustomForm/CustomForm";
-import { GlobalContext } from "./gc.createMovie";
-import { IMovie } from "../../../modules/movies/entities";
+import { CustomForm } from "@components/forms/";
+import { GlobalContext } from "@contexts/modals/CreateMovie";
+import { Movie } from "@/modules/shared/interfaces";
 
 interface IGlobalProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-export interface ValueType extends Omit<IMovie, "id"> {
+export interface ValueType extends Omit<Movie, "id"> {
   id?: number;
 }
 
@@ -26,7 +26,7 @@ export const CreateMovieProvider = ({ children }: IGlobalProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [value, setValue] = useState<ValueType | undefined>(INIT_VALUE);
 
-  const handleOpen = (movie?: IMovie) => {
+  const handleOpen = (movie?: Movie) => {
     setIsOpen(true);
     if (movie) setValue(movie);
     else setValue(INIT_VALUE);

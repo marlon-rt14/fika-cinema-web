@@ -1,16 +1,19 @@
-import { memo, useMemo } from "react";
-import { useStoreQuery } from "../../../store";
-import { useQueryMovies } from "../hooks";
-import { getFilteredMovies } from "../utils";
-import { MovieItem } from "./MovieItem/MovieItem";
+import { memo, useMemo } from "@core/imports";
+import { useMovies } from "@movies/hooks";
+import { getFilteredMovies } from "@movies/services/utils";
+import { useStoreQuery } from "@/store";
+import { MovieItem } from "@movies/components";
 import "./styles.css";
 
-interface IProps {
+interface Props {
   selectedGenre?: { id: number; name: string };
 }
 
-const ListMovies = memo(({ selectedGenre }: IProps) => {
-  const { movies } = useQueryMovies();
+const ListMovies = memo(({ selectedGenre }: Props) => {
+  const {
+    movieQueries: { movies },
+  } = useMovies();
+
   const { queryDebounce } = useStoreQuery();
 
   const filteredMovies = useMemo(() => getFilteredMovies({ movies, selectedGenre: selectedGenre, query: queryDebounce }), [movies, selectedGenre, queryDebounce]);

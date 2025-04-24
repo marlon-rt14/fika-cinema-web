@@ -1,4 +1,4 @@
-import { useLocation } from "react-router";
+import { useLocation } from "@core/imports";
 
 export default function ErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
   return (

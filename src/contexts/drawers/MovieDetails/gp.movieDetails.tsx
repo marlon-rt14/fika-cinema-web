@@ -1,22 +1,19 @@
-import { ReactNode, useCallback, useState } from "react";
+import { Movie } from "@/modules/shared/interfaces";
+import { useCallback, useState } from "@core/imports";
 import { Drawer, DrawerBody, DrawerContent, DrawerFooter, DrawerHeader } from "@heroui/drawer";
-import { Button } from "../../../components/common";
-import { IMovie } from "../../../modules/movies/entities";
-import { GC_MovieDetails } from "./gc.movieDetails";
-import { Genres } from "../../../modules/movies/components";
-import { CloseButton, Cover, Rate } from "./components";
+import { GC_MovieDetails, CloseButton, Cover, Rate } from "@contexts/drawers/MovieDetails";
+import { Button } from "@components";
+import { Genres } from "@modules/movies/components";
 
 interface IGlobalProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 export const MovieDetailsProvider = ({ children }: IGlobalProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [movie, setMovie] = useState<IMovie | null>(null);
+  const [movie, setMovie] = useState<Movie | null>(null);
 
-  // console.log(movie)
-
-  const handleOpen = useCallback((movie: IMovie) => {
+  const handleOpen = useCallback((movie: Movie) => {
     setIsOpen(true);
     setMovie(movie);
   }, []);

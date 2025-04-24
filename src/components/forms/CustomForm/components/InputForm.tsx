@@ -1,9 +1,9 @@
 import { Control, Controller, FieldError } from "react-hook-form";
+import { TFormValues } from "@movies/schemas";
+import { Input } from "@components";
 import "./InputForm.css";
-import { TFormValues } from "../../../../models";
-import { Input } from "../../../common";
 
-interface IProps {
+interface Props {
   name: keyof TFormValues;
   control: Control<TFormValues>;
   label: string;
@@ -12,7 +12,7 @@ interface IProps {
   inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
 }
 
-export const InputForm = ({ name, control, label, type, error, inputProps }: IProps) => {
+export const InputForm = ({ name, control, label, type, error, inputProps }: Props) => {
   return (
     <div className="form-group">
       <label htmlFor={name}>{label}</label>

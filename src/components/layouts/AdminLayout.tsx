@@ -1,6 +1,5 @@
-import { Outlet } from "react-router";
-import { SidebarAdmin } from "../Partials";
-import { MainAdmin } from "./components/MainAdmin";
+import { Outlet } from "@core/imports";
+import { SidebarAdmin, MainAdmin } from "@components";
 
 export const AdminLayout = () => {
   return (

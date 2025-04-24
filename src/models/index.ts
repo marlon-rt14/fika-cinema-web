@@ -1,1 +1,0 @@
-export * from './form.createmovie.model'

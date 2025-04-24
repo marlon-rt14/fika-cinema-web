@@ -1,5 +1,3 @@
-import React from "react";
-
 type TProps = React.HTMLAttributes<HTMLButtonElement>;
 
 export const IconButton = ({ children, className, ...props }: TProps) => {

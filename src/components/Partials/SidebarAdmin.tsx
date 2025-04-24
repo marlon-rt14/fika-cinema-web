@@ -1,4 +1,4 @@
-import { ButtonItem, ButtonLink } from "./components";
+import { ButtonItem, ButtonLink } from "@components";
 
 export const SidebarAdmin = () => {
   return (

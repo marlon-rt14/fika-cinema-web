@@ -1,10 +1,10 @@
-import { memo } from "react";
+import { memo } from "@core/imports";
 import { Control, Controller, FieldError, Merge } from "react-hook-form";
-import { ComboboxForm } from ".";
-import { TFormValues } from "../../../../models";
+import { ComboboxForm } from "@components/forms/CustomForm/components/";
+import { TFormValues } from "@movies/schemas";
 import "./InputForm.css";
 
-interface IProps {
+interface Props {
   name: keyof TFormValues;
   control: Control<TFormValues>;
   label: string;
@@ -15,7 +15,7 @@ interface IProps {
   // setValue: UseFormSetValue<TFormValues>;
 }
 
-export const ListBoxForm = memo(({ name, control, label, error, data, selectedItems, onChange }: IProps) => {
+export const ListBoxForm = memo(({ name, control, label, error, data, selectedItems, onChange }: Props) => {
   return (
     <div className="form-group">
       <label htmlFor={name}>{label}</label>

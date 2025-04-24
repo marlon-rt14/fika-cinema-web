@@ -1,10 +1,17 @@
-import { CastItem } from ".";
-import { useStoreQuery } from "../../../../store/useStoreQuery";
-import { filterByQuery } from "../../../../utils";
-import { useQueryCasts } from "../../../cast/hooks";
+// import { CastItem } from ".";
+// import { useStoreQuery } from "../../../../store/useStoreQuery";
+// import { filterByQuery } from "../../../shared/utils";
+// import { useQueryCasts } from "../../../cast/hooks";
+
+import { useStoreQuery } from "@/store";
+import { filterByQuery } from "@/modules/shared/utils";
+import { CastItem } from "@admin/components/casts";
+import { useCasts } from "@cast/hooks";
 
 export const ListCasts = () => {
-  const { casts } = useQueryCasts();
+  const {
+    castsQuery: { casts },
+  } = useCasts();
 
   const { query } = useStoreQuery();
 

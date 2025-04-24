@@ -1,7 +1,7 @@
-import { IGenre } from "../../../genres/entities";
+import { Genre } from "@/modules/shared/interfaces";
 
 interface Props {
-  genre: IGenre;
+  genre: Genre;
 }
 
 export const GenreItem = ({ genre }: Props) => {

@@ -1,15 +1,13 @@
-import { lazy, Suspense, useDeferredValue } from "react";
-import { ErrorBoundary } from "react-error-boundary";
-import { LoadingLazyComponent } from "../../../components/loaders";
-import { ErrorFallbackRouter } from "../../../components/Partials";
-import { useStoreGenres } from "../../../store";
-import { useQueryGenres } from "../../genres/hooks";
-import { GenresFilter } from "../components";
+import { lazy, useDeferredValue, ErrorBoundary, Suspense } from "@core/imports";
+import { ErrorFallbackRouter, LoadingLazyComponent } from "@/components";
+import { useStoreGenres } from "@/store";
+import { useGenres } from "@genres/hooks";
+import { GenresFilter } from "@movies/components";
 
 const LazyMovies = lazy(() => import("../components/ListMovies"));
 
 export const Movies = () => {
-  const { genres } = useQueryGenres();
+  const { genres } = useGenres();
   const { selectedGenre } = useStoreGenres();
 
   const deferSelectedGenre = useDeferredValue(selectedGenre);

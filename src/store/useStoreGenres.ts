@@ -1,16 +1,16 @@
 import { create } from "zustand";
 import { createJSONStorage, persist, StateStorage } from "zustand/middleware";
 import secureLocalStorage from "react-secure-storage";
-import { IGenre } from "../modules/genres/entities";
+import { Genre } from "../modules/genres/entities";
 
 interface IStoreGenres {
-  genres: IGenre[];
-  selectedGenre?: IGenre;
-  setSelectedGenre: (genre?: IGenre) => void;
-  createGenre: (genre: IGenre) => void;
-  updateGenre: (payload: IGenre, id: number) => void;
+  genres: Genre[];
+  selectedGenre?: Genre;
+  setSelectedGenre: (genre?: Genre) => void;
+  createGenre: (genre: Genre) => void;
+  updateGenre: (payload: Genre, id: number) => void;
   deleteGenre: (id: number) => void;
-  setGenres: (genres: IGenre[]) => void;
+  setGenres: (genres: Genre[]) => void;
 }
 
 export const useStoreGenres = create(

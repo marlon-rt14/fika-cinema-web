@@ -1,15 +1,17 @@
-import { memo } from "react";
-import { Star } from "../../../../assets/icons";
-import { useMutationMovies } from "../../../../modules/movies/hooks";
-import { useGlobalMovieDetails } from "../gc.movieDetails";
+import { memo } from "@core/imports";
+import { Star } from "@/assets/icons";
+import { useMovies } from "@movies/hooks";
+import { useGlobalMovieDetails } from "@contexts/drawers/MovieDetails/";
 
-interface IProps {
+interface Props {
   rate: number;
   movieId: number;
 }
 
-export const Rate = memo(({ rate, movieId }: IProps) => {
-  const { patchRate } = useMutationMovies();
+export const Rate = memo(({ rate, movieId }: Props) => {
+  const { movieMutations } = useMovies();
+
+  const { patchRate } = movieMutations;
   const { setMovie } = useGlobalMovieDetails();
 
   const stars = Array.from({ length: 5 }, (_, index) => index + 1);
@@ -33,10 +35,3 @@ export const Rate = memo(({ rate, movieId }: IProps) => {
     </div>
   );
 });
-
-// const handleRate = async (rate: number) => {
-//   if (movieId) {
-//     patchRate.mutate({ id: movieId, rate });
-//     setMovie((prev) => (prev ? { ...prev, rate } : null));
-//   }
-// };

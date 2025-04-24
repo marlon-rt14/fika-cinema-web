@@ -1,11 +1,11 @@
 import { Button } from "@heroui/button";
 import { Tooltip } from "@heroui/tooltip";
 
-interface IProps {
+interface Props {
   onClose: () => void;
 }
 
-export const CloseButton = ({ onClose }: IProps) => {
+export const CloseButton = ({ onClose }: Props) => {
   return (
     <div className="mb-2">
       <Tooltip content="Close" className="text-white bg-comp-red rounded-2xl relative">

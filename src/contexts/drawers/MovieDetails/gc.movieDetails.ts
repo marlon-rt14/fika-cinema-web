@@ -1,10 +1,10 @@
-import { createContext, useContext } from "react";
-import { IMovie } from "../../../modules/movies/entities";
+import { Movie } from "@/modules/shared/interfaces";
+import { createContext, useContext } from "@core/imports";
 
 export interface IGC_MovieDetails {
-  movie: IMovie | null;
-  setMovie: React.Dispatch<React.SetStateAction<IMovie | null>>;
-  onOpen: (movie: IMovie) => void;
+  movie: Movie | null;
+  setMovie: React.Dispatch<React.SetStateAction<Movie | null>>;
+  onOpen: (movie: Movie) => void;
 }
 
 const INIT_STATE = { onOpen: () => {}, movie: null, setMovie: () => {} };

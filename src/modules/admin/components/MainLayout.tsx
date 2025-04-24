@@ -1,5 +1,4 @@
-import React from "react";
-import { Title } from ".";
+import { Title } from "@admin/components";
 
 interface Props {
   children: React.ReactNode;

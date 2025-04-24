@@ -1,10 +1,8 @@
-import { Navigate, Route, Routes } from "react-router";
-import { MovieLayout } from "../components/layouts/MovieLayout";
-import { Movies } from "../modules/movies";
-import { NotFoundPage } from "../modules/public";
-import { Admin } from "./Admin";
-import { ErrorBoundary } from "react-error-boundary";
-import { ErrorFallbackRouter } from "../components/Partials";
+import { Navigate, Route, Routes, ErrorBoundary } from "@core/imports";
+import { MovieLayout, ErrorFallbackRouter } from "@components";
+import { NotFoundPage } from "@/modules/shared/pages";
+import { Movies } from "@movies/pages";
+import { Admin } from "@navigation";
 
 export const Router = () => {
   return (

@@ -1,9 +1,7 @@
-import { Navigate, Route, Routes } from "react-router";
-import { ErrorBoundary } from "react-error-boundary";
-import { AdminLayout } from "../components/layouts";
+import { Navigate, Route, Routes, ErrorBoundary } from "@core/imports";
+import { NotFoundPage } from "@/modules/shared/pages";
 import { Cast, Genres, Movies } from "../modules/admin/pages";
-import { NotFoundPage } from "../modules/public";
-import { ErrorFallbackRouter } from "../components/Partials";
+import { AdminLayout, ErrorFallbackRouter } from "@components";
 
 export const Admin = () => {
   return (

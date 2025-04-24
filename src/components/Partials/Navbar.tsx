@@ -1,16 +1,13 @@
-import { Logo } from "../../assets/icons";
-import { useQuery } from "../../modules/admin/hooks";
-import { useStoreQuery } from "../../store";
-import { Button, Input } from "../common";
-import { LoaderTailChase } from "../loaders";
+import { Logo } from "@/assets/icons";
+import { useQuery } from "@/modules/shared/hooks";
+import { useStoreQuery } from "@/store";
+import { Button, Input, LoaderTailChase } from "@components";
 
-interface IProps {
+interface Props {
   isScrolled: boolean;
 }
 
-export const Navbar = ({ isScrolled }: IProps) => {
- 
-
+export const Navbar = ({ isScrolled }: Props) => {
   const { query, handleSearch } = useQuery("");
   const { isPending } = useStoreQuery();
 

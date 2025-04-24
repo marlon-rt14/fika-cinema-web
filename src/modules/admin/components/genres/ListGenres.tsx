@@ -1,10 +1,10 @@
-import { GenreItem } from ".";
-import { useStoreQuery } from "../../../../store/useStoreQuery";
-import { filterByQuery } from "../../../../utils";
-import { useQueryGenres } from "../../../genres/hooks";
+import { filterByQuery } from "@/modules/shared/utils";
+import { useStoreQuery } from "@/store";
+import { GenreItem } from "@admin/components/genres";
+import { useGenres } from "@genres/hooks";
 
 export const ListGenres = () => {
-  const { genres } = useQueryGenres();
+  const { genres } = useGenres();
   const { query } = useStoreQuery();
 
   const filteredGenres = filterByQuery({ array: genres, predicate: "name", query });

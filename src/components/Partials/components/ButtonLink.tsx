@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router";
+import { Link } from "@core/imports";
 
 export const ButtonLink = ({ children, to }: { children: React.ReactNode; to: string }) => {
   return (

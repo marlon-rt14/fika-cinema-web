@@ -1,2 +1,2 @@
 export * from "./useCastSelected";
-export * from "./useQueryCasts";
+export * from "./useCasts";

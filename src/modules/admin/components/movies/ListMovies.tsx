@@ -1,4 +1,4 @@
-import { TableRowHead, TableRowBody } from ".";
+import { TableRowHead, TableRowBody } from "@admin/components/movies";
 
 export const ListMovies = () => {
   return (

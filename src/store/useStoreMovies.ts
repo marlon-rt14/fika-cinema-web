@@ -1,16 +1,16 @@
 import { create } from "zustand";
 import { createJSONStorage, persist, StateStorage } from "zustand/middleware";
 import secureLocalStorage from "react-secure-storage";
-import { IMovie } from "../modules/movies/entities";
+import { Movie } from "../modules/movies/entities";
 
 interface IStoreMovies {
-  movies: IMovie[];
-  createMovie: (movie: IMovie) => void;
-  updateMovie: (payload: IMovie, id: number) => void;
+  movies: Movie[];
+  createMovie: (movie: Movie) => void;
+  updateMovie: (payload: Movie, id: number) => void;
   deleteMovie: (id: number) => void;
   patchRate: (rate: number, id: number) => void;
-  getMovie: (id: number) => IMovie | undefined;
-  setMovies: (movies: IMovie[]) => void;
+  getMovie: (id: number) => Movie | undefined;
+  setMovies: (movies: Movie[]) => void;
 }
 
 export const useStoreMovies = create(

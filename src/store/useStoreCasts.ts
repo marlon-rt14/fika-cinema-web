@@ -1,14 +1,14 @@
 import { create } from "zustand";
 import { createJSONStorage, persist, StateStorage } from "zustand/middleware";
 import secureLocalStorage from "react-secure-storage";
-import { ICast } from "../modules/cast/entities";
+import { Cast } from "../modules/cast/entities";
 
 interface IStoreCasts {
-  casts: ICast[];
-  createCast: (cast: ICast) => void;
-  updateCast: (payload: ICast, id: number) => void;
+  casts: Cast[];
+  createCast: (cast: Cast) => void;
+  updateCast: (payload: Cast, id: number) => void;
   deleteCast: (id: number) => void;
-  setCasts: (casts: ICast[]) => void;
+  setCasts: (casts: Cast[]) => void;
 }
 
 export const useStoreCasts = create(

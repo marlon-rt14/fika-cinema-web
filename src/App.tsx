@@ -1,7 +1,6 @@
-import { BrowserRouter } from "react-router";
-import { Router } from "./navigation/Router";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ConfirmDeleteProvider, CreateMovieProvider, MovieDetailsProvider } from "./contexts";
+import { BrowserRouter, QueryClient, QueryClientProvider } from "@core/imports";
+import { ConfirmDeleteProvider, CreateMovieProvider, MovieDetailsProvider } from "@contexts";
+import { Router } from "@navigation";
 
 const queryClient = new QueryClient();
 

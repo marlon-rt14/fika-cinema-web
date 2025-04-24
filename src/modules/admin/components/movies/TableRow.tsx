@@ -1,11 +1,11 @@
-import { memo } from "react";
-import { IconButton, TableRowCell } from "..";
-import { Delete, Update } from "../../../../assets/icons";
-import { IMovie } from "../../../movies/entities";
+import { memo } from "@core/imports";
+import { Movie } from "@/modules/shared/interfaces";
+import { TableRowCell, IconButton } from "@admin/components";
+import { Delete, Update } from "@/assets/icons";
 
 interface ITableRowProps {
-  movie: IMovie;
-  onUpdate: (movie: IMovie) => void;
+  movie: Movie;
+  onUpdate: (movie: Movie) => void;
   onDelete: (movieId: number) => void;
 }
 

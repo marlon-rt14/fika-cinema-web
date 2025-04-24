@@ -1,8 +1,8 @@
-import { Add } from "../../../assets/icons";
-import { Button, Input } from "../../../components/common";
-import { useGlobalCreateMovie } from "../../../contexts/modals";
-import { ListMovies, MainLayout } from "../components";
-import { useQuery } from "../hooks";
+import { Input, Button } from "@components";
+import { MainLayout, ListMovies } from "@admin/components";
+import { useGlobalCreateMovie } from "@/contexts";
+import { useQuery } from "@/modules/shared/hooks";
+import { Add } from "@/assets/icons";
 
 export const Movies = () => {
   const { onOpen } = useGlobalCreateMovie();

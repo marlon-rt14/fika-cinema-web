@@ -20,7 +20,31 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Paths */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@core/*": ["src/core/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components": ["src/components"],
+      "@components/*": ["src/components/*"],
+      "@contexts": ["src/contexts/"],
+      "@contexts/*": ["src/contexts/*"],
+      "@models": ["src/models/*"],
+
+      /* MODULES */
+      "@modules/*": ["src/modules/*"],
+      "@admin/*": ["src/modules/admin/*"],
+      "@cast/*": ["src/modules/cast/*"],
+      "@genres/*": ["src/modules/genres/*"],
+      "@movies/*": ["src/modules/movies/*"],
+      "@shared/*": ["src/modules/shared/*"],
+
+      "@navigation": ["src/navigation/"],
+      "@store/*": ["src/store/*"],
+    }
   },
   "include": ["src"]
 }

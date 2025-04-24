@@ -1,4 +1,4 @@
-import { TableRowCell } from ".";
+import { TableRowCell } from "@admin/components/movies";
 
 export const TableRowHead = () => {
   return (

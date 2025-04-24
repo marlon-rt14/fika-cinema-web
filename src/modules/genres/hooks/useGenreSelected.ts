@@ -1,9 +1,9 @@
+import { Genre } from "@/modules/shared/interfaces";
 import { useCallback, useState } from "react";
-import { IGenre } from "../entities";
 
-export const useGenreSelected = (genres: IGenre[]) => {
-  const [selectedGenre, setSelectedGenre] = useState(genres[0]);
-  const [selectedGenres, setSelectedGenres] = useState<IGenre[]>([]);
+export const useGenreSelected = (genres?: Genre[]) => {
+  const [selectedGenre, setSelectedGenre] = useState<Genre | undefined>(genres?.[0]);
+  const [selectedGenres, setSelectedGenres] = useState<Genre[]>([]);
 
   const handleChange = useCallback((item: { id: number; name: string }) => {
     setSelectedGenre(item);
@@ -18,6 +18,7 @@ export const useGenreSelected = (genres: IGenre[]) => {
   //     }
   //   });
   // }, []);
+
   const handleChangeMultiple = useCallback((items: { id: number; name: string }[]) => {
     setSelectedGenres(items);
   }, []);

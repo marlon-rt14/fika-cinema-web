@@ -1,4 +1,4 @@
-import BACKGROUND from "../../../assets/images/header.webp";
+import BACKGROUND from "@/assets/images/header.webp";
 import "../styles/header.css";
 
 export const HeaderBg = () => {

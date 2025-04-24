@@ -1,12 +1,12 @@
-import { Pill } from ".";
-import { useStoreGenres } from "../../../store";
-import { IGenre } from "../../genres/entities";
+import { Genre } from "@/modules/shared/interfaces";
+import { useStoreGenres } from "@/store";
+import { Pill } from "@movies/components";
 
-interface IProps {
-  genres: IGenre[];
+interface Props {
+  genres: Genre[];
 }
 
-export const GenresFilter = ({ genres }: IProps) => {
+export const GenresFilter = ({ genres }: Props) => {
   const { selectedGenre, setSelectedGenre } = useStoreGenres();
 
   return (

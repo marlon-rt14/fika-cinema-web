@@ -1,6 +1,5 @@
-import { useSyncExternalStore } from "react";
-import { Banner, Navbar } from ".";
-import { HeaderBg } from "./components";
+import { useSyncExternalStore } from "@core/imports";
+import { Banner, Navbar, HeaderBg } from "@components/Partials";
 
 export const Header = () => {
   // Suscribirse al scroll del navegador usando useSyncExternalStore

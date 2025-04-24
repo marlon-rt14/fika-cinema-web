@@ -1,11 +1,11 @@
 import React, { createContext, useContext } from "react";
-import { IMovie } from "../../../modules/movies/entities";
+import { Movie } from "../../../modules/movies/entities";
 import { ValueType } from "./gp.createMovie";
 
 export interface IGC_CreateMovie {
   value: ValueType | undefined;
   setValue: React.Dispatch<React.SetStateAction<ValueType | undefined>>;
-  onOpen: (movie?: IMovie) => void;
+  onOpen: (movie?: Movie) => void;
   onClose: () => void;
 }
 

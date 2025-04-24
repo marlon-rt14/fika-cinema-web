@@ -1,14 +1,14 @@
-import { memo } from "react";
-import { Genres, Overview, Rate, Title } from ".";
-import { useGlobalMovieDetails } from "../../../../contexts";
-import { IMovie } from "../../entities";
+import { memo } from "@core/imports";
+import { useGlobalMovieDetails } from "@/contexts";
+import { Genres, Overview, Rate, Title } from "@movies/components";
+import { Movie } from "@/modules/shared/interfaces";
 import "./styles.css";
 
-interface IProps {
-  movie: IMovie;
+interface Props {
+  movie: Movie;
 }
 
-export const MovieItem = memo(({ movie }: IProps) => {
+export const MovieItem = memo(({ movie }: Props) => {
   const { title, overview, rate, poster_path, genres } = movie;
 
   const { onOpen } = useGlobalMovieDetails();

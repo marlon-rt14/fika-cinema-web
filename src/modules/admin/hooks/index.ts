@@ -1,1 +1,1 @@
-export * from './useQuery'
+export * from './useAdmin'

@@ -1,10 +1,10 @@
 import "./style.css";
 
-interface IProps {
+interface Props {
   path?: string;
 }
 
-export const Cover = ({ path }: IProps) => {
+export const Cover = ({ path }: Props) => {
   return (
     <div
       //

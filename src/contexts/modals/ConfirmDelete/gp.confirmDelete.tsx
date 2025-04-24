@@ -1,10 +1,10 @@
+import { useState } from "@core/imports";
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
-import { ReactNode, useState } from "react";
-import { Button } from "../../../components/common";
-import { GC_ConfirmDelete } from "./gc.confirmDelete";
+import { Button } from "@components";
+import { GC_ConfirmDelete } from "@contexts/modals/ConfirmDelete";
 
 interface IGlobalProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 const INIT_MESSAGE = "Are you sure you want to delete this?";
