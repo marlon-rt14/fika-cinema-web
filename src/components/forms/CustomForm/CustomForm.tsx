@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from "@core/imports";
+import { useCallback, useEffect } from "@/core/base";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { InputForm, ListBoxForm, Button } from "@components";

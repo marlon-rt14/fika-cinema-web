@@ -1,7 +1,5 @@
-import { create } from "zustand";
-import { createJSONStorage, persist, StateStorage } from "zustand/middleware";
-import secureLocalStorage from "react-secure-storage";
-import { Movie } from "../modules/movies/entities";
+import { create, persist, StateStorage, createJSONStorage, secureLocalStorage } from "@/core/state-management";
+import { Movie } from "@/modules/shared/interfaces";
 
 interface IStoreMovies {
   movies: Movie[];

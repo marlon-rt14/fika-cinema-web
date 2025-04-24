@@ -1,7 +1,7 @@
 import { Combobox, ComboboxButton, ComboboxInput, ComboboxOption, ComboboxOptions } from "@headlessui/react";
 import { CheckIcon, ChevronDownIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
-import { memo, useState } from "react";
+import { memo, useState } from "@core/base";
 
 interface IComboboxFormProps {
   data: { id: number; name: string }[];

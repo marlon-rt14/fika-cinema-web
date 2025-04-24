@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext } from "@core/base";
 
 export interface IGC_ConfirmDelete {
   message: string | undefined;

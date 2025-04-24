@@ -1,4 +1,4 @@
-import { memo } from "@core/imports";
+import { memo } from "@/core/base";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   text: string;

@@ -1,7 +1,7 @@
 import { Listbox, ListboxButton, ListboxOptions } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
-import { memo } from "react";
+import { memo } from "@core/base";
 import { ListBoxItem } from "./components";
 
 interface IItem {

@@ -1,4 +1,4 @@
-import { Outlet } from "@core/imports";
+import { Outlet } from "@/core/routing";
 import { Header } from "@components";
 import { Main } from "@components/layouts/components";
 

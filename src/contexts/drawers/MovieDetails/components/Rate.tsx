@@ -1,4 +1,4 @@
-import { memo } from "@core/imports";
+import { memo } from "@/core/base";
 import { Star } from "@/assets/icons";
 import { useMovies } from "@movies/hooks";
 import { useGlobalMovieDetails } from "@contexts/drawers/MovieDetails/";

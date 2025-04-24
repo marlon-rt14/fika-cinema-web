@@ -1,6 +1,6 @@
-import React, { createContext, useContext } from "react";
-import { Movie } from "../../../modules/movies/entities";
-import { ValueType } from "./gp.createMovie";
+import { createContext, useContext } from "@/core/base";
+import { ValueType } from "@contexts/modals/CreateMovie/";
+import { Movie } from "@/modules/shared/interfaces";
 
 export interface IGC_CreateMovie {
   value: ValueType | undefined;

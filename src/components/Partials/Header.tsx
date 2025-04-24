@@ -1,4 +1,4 @@
-import { useSyncExternalStore } from "@core/imports";
+import { useSyncExternalStore } from "@/core/base";
 import { Banner, Navbar, HeaderBg } from "@components/Partials";
 
 export const Header = () => {

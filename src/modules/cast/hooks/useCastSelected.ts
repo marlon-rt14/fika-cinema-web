@@ -1,4 +1,4 @@
-import { useCallback, useState } from "@core/imports";
+import { useCallback, useState } from "@/core/base";
 import { Cast } from "@/modules/shared/interfaces";
 
 export const useCastSelected = (casts?: Cast[]) => {

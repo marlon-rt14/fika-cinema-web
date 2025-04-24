@@ -1,4 +1,4 @@
-import { memo } from "@core/imports";
+import { memo } from "@/core/base";
 import { Control, Controller, FieldError, Merge } from "react-hook-form";
 import { ComboboxForm } from "@components/forms/CustomForm/components/";
 import { TFormValues } from "@movies/schemas";

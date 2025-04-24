@@ -1,6 +1,6 @@
 import { ListboxOption } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/20/solid";
-import { memo } from "react";
+import { memo } from "@core/base";
 
 interface Props {
   value: { id: number; name: string };

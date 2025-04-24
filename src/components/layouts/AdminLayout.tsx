@@ -1,4 +1,4 @@
-import { Outlet } from "@core/imports";
+import { Outlet } from "@/core/routing";
 import { SidebarAdmin, MainAdmin } from "@components";
 
 export const AdminLayout = () => {

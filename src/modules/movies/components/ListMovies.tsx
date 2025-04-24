@@ -1,4 +1,4 @@
-import { memo, useMemo } from "@core/imports";
+import { memo, useMemo } from "@/core/base";
 import { useMovies } from "@movies/hooks";
 import { getFilteredMovies } from "@movies/services/utils";
 import { useStoreQuery } from "@/store";

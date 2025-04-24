@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, ErrorBoundary } from "@core/imports";
+import { Navigate, Route, Routes, ErrorBoundary } from "@/core";
 import { NotFoundPage } from "@/modules/shared/pages";
 import { Cast, Genres, Movies } from "../modules/admin/pages";
 import { AdminLayout, ErrorFallbackRouter } from "@components";

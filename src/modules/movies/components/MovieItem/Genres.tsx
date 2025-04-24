@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "@core/imports";
+import { useCallback, useEffect, useRef, useState } from "@/core/base";
 import { Genre } from "@/modules/shared/interfaces";
 import { Pill } from "@movies/components";
 

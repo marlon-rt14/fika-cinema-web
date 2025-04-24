@@ -1,4 +1,4 @@
-import { useState } from "@core/imports";
+import { useState } from "@/core/base";
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
 import { CustomForm } from "@components/forms/";
 import { GlobalContext } from "@contexts/modals/CreateMovie";

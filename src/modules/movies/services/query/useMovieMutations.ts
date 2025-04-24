@@ -1,4 +1,4 @@
-import { useEffect } from "@core/imports";
+import { useEffect } from "@/core/base";
 import { useMutation } from "@tanstack/react-query";
 import { PostMovie, PutMovie, deleteMovie as deleteMovieRequest, patchRate as patchRateRequest, postMovie, putMovie } from "@movies/services/api";
 import { useStoreMovies } from "@/store";

@@ -1,5 +1,5 @@
 import { Movie } from "@/modules/shared/interfaces";
-import { createContext, useContext } from "@core/imports";
+import { createContext, useContext } from "@/core/base";
 
 export interface IGC_MovieDetails {
   movie: Movie | null;

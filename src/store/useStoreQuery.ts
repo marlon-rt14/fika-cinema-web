@@ -1,9 +1,9 @@
-import { create } from "zustand";
+import { create } from "@core/state-management";
 
 interface IStoreQuery {
   query: string;
   queryDebounce: string;
-  isPending: boolean,
+  isPending: boolean;
   setIsPending: (isPending: boolean) => void;
   setQueryDebounce: (query: string) => void;
   setQuery: (query: string) => void;

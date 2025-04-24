@@ -1,4 +1,4 @@
-import { useQuery, useCallback, useEffect } from "@core/imports";
+import { useQuery, useCallback, useEffect } from "@/core";
 import { Cast } from "@/modules/shared/interfaces";
 import { useStoreCasts } from "@/store";
 import { getCasts } from "@cast/services/api";

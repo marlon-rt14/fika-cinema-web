@@ -1,7 +1,5 @@
-import { create } from "zustand";
-import { createJSONStorage, persist, StateStorage } from "zustand/middleware";
-import secureLocalStorage from "react-secure-storage";
-import { Genre } from "../modules/genres/entities";
+import { create, persist, StateStorage, createJSONStorage, secureLocalStorage } from "@/core/state-management";
+import { Genre } from "@/modules/shared/interfaces";
 
 interface IStoreGenres {
   genres: Genre[];

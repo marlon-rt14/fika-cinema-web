@@ -1,5 +1,5 @@
 import { useStoreQuery } from "@/store";
-import { useEffect, useRef, useTransition } from "@core/imports";
+import { useEffect, useRef, useTransition } from "@/core/base";
 
 export const useQuery = (query: string) => {
   const { query: queryStore, setQuery, setQueryDebounce, setIsPending } = useStoreQuery();

@@ -1,4 +1,4 @@
-import { memo } from "@core/imports";
+import { memo } from "@/core/base";
 import { useGlobalMovieDetails } from "@/contexts";
 import { Genres, Overview, Rate, Title } from "@movies/components";
 import { Movie } from "@/modules/shared/interfaces";

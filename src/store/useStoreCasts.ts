@@ -1,7 +1,5 @@
-import { create } from "zustand";
-import { createJSONStorage, persist, StateStorage } from "zustand/middleware";
-import secureLocalStorage from "react-secure-storage";
-import { Cast } from "../modules/cast/entities";
+import { create, persist, StateStorage, createJSONStorage, secureLocalStorage } from "@/core/state-management";
+import { Cast } from "@/modules/shared/interfaces";
 
 interface IStoreCasts {
   casts: Cast[];

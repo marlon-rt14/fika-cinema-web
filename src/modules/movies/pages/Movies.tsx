@@ -1,10 +1,10 @@
-import { lazy, useDeferredValue, ErrorBoundary, Suspense } from "@core/imports";
+import { lazy, useDeferredValue, ErrorBoundary, Suspense } from "@/core";
 import { ErrorFallbackRouter, LoadingLazyComponent } from "@/components";
 import { useStoreGenres } from "@/store";
 import { useGenres } from "@genres/hooks";
 import { GenresFilter } from "@movies/components";
 
-const LazyMovies = lazy(() => import("../components/ListMovies"));
+const LazyMovies = lazy(() => import("@movies/components/ListMovies"));
 
 export const Movies = () => {
   const { genres } = useGenres();

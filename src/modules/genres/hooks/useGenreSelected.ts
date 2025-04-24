@@ -1,5 +1,5 @@
 import { Genre } from "@/modules/shared/interfaces";
-import { useCallback, useState } from "react";
+import { useCallback, useState } from "@core/base";
 
 export const useGenreSelected = (genres?: Genre[]) => {
   const [selectedGenre, setSelectedGenre] = useState<Genre | undefined>(genres?.[0]);

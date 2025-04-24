@@ -1,6 +1,5 @@
+import { useCallback, useEffect, useQuery } from "@core";
 import { useStoreMovies } from "@/store";
-import { useQuery } from "@tanstack/react-query";
-import { useCallback, useEffect } from "react";
 import { Movie } from "@/modules/shared/interfaces";
 import { useGlobalConfirmDelete, useGlobalCreateMovie } from "@/contexts";
 import { useMovieMutations } from "@movies/services/query";

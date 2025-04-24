@@ -1,4 +1,4 @@
-import { useLocation } from "@core/imports";
+import { useLocation } from "@/core/routing";
 
 export default function ErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
   return (

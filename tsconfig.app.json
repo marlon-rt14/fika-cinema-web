@@ -26,6 +26,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
+      "@core": ["src/core"],
       "@core/*": ["src/core/*"],
       "@assets/*": ["src/assets/*"],
       "@components": ["src/components"],
@@ -43,7 +44,7 @@
       "@shared/*": ["src/modules/shared/*"],
 
       "@navigation": ["src/navigation/"],
-      "@store/*": ["src/store/*"],
+      "@store/*": ["src/store/*"]
     }
   },
   "include": ["src"]

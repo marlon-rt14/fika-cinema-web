@@ -1,4 +1,4 @@
-import { Link } from "@core/imports";
+import { Link } from "@/core/routing";
 
 export const ButtonLink = ({ children, to }: { children: React.ReactNode; to: string }) => {
   return (

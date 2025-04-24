@@ -1,5 +1,5 @@
 import { Movie } from "@/modules/shared/interfaces";
-import { useCallback, useState } from "@core/imports";
+import { useCallback, useState } from "@/core/base";
 import { Drawer, DrawerBody, DrawerContent, DrawerFooter, DrawerHeader } from "@heroui/drawer";
 import { GC_MovieDetails, CloseButton, Cover, Rate } from "@contexts/drawers/MovieDetails";
 import { Button } from "@components";

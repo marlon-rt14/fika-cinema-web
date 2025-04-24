@@ -1,4 +1,4 @@
-import { memo } from "@core/imports";
+import { memo } from "@/core/base";
 import { Movie } from "@/modules/shared/interfaces";
 import { TableRowCell, IconButton } from "@admin/components";
 import { Delete, Update } from "@/assets/icons";

@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useEffect, useQuery } from "@core";
 import { useStoreGenres } from "@/store";
 import { getGenres } from "@genres/services/api";
 

@@ -1,4 +1,4 @@
-import { BrowserRouter, QueryClient, QueryClientProvider } from "@core/imports";
+import { BrowserRouter, QueryClient, QueryClientProvider } from "@/core";
 import { ConfirmDeleteProvider, CreateMovieProvider, MovieDetailsProvider } from "@contexts";
 import { Router } from "@navigation";
 
