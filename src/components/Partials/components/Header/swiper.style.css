@@ -1,0 +1,12 @@
+.mySwiper {
+  height: 100%;
+  position: absolute;
+  height: 100% !important;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.swiper-slide-shadow {
+  background: transparent !important;
+}

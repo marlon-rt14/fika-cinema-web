@@ -11,13 +11,16 @@ interface IItem {
 
 interface Props {
   data: IItem[];
-  selectedItem: IItem;
+  selectedItem?: IItem;
   setSelectedItem: (item: IItem) => void;
+  wrapperProps?: React.HTMLAttributes<HTMLDivElement>;
 }
 
-export const ListBox = memo(({ data, selectedItem, setSelectedItem }: Props) => {
+export const ListBox = memo(({ data, selectedItem, setSelectedItem, wrapperProps }: Props) => {
+  const { className, ...rest } = wrapperProps || {};
+
   return (
-    <div className="max-w-52 z-50 select">
+    <div className={`max-w-52 z-50 select ${className}`} {...rest}>
       <Listbox value={selectedItem} onChange={setSelectedItem}>
         <ListboxButton
           className={clsx(
@@ -25,7 +28,7 @@ export const ListBox = memo(({ data, selectedItem, setSelectedItem }: Props) => 
             "focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25"
           )}
         >
-          {selectedItem.name}
+          {selectedItem?.name}
           <ChevronDownIcon className="group pointer-events-none absolute top-2.5 right-2.5 size-4 fill-white/60" aria-hidden="true" />
         </ListboxButton>
         <ListboxOptions

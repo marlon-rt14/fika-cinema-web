@@ -10,7 +10,7 @@ export const GenresFilter = ({ genres }: Props) => {
   const { selectedGenre, setSelectedGenre } = useStoreGenres();
 
   return (
-    <div className="flex flex-wrap gap-5 justify-center">
+    <div className="flex flex-wrap gap-5 justify-center max-sm:hidden">
       {genres.map(({ id, name }) => (
         <Pill
           key={id}

@@ -1,11 +1,13 @@
 import { Outlet } from "@/core/routing";
-import { SidebarAdmin, MainAdmin } from "@components";
+import { MainAdmin, NavbarAdmin, SidebarAdmin } from "@components";
 
 export const AdminLayout = () => {
   return (
-    <div className="flex flex-row h-screen w-screen bg-gray-100">
+    <div className="flex flex-row relative overflow-hidden  bg-gray-100">
       <SidebarAdmin />
+      {/* <SidebarAdminRes showSidebar={showSideBar} /> */}
       <MainAdmin>
+        <NavbarAdmin />
         <Outlet />
       </MainAdmin>
     </div>

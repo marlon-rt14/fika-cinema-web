@@ -15,13 +15,15 @@ export const Movies = () => {
 
   return (
     <MainLayout title="Movies">
-      <div className="flex justify-between items-center">
-        <Input placeholder="Search by title..." value={query} onChange={handleSearch} className="placeholder:text-gray-400" />
-        <Button startIcon={<Add />} onClick={handleAdd}>
-          Add
-        </Button>
+      <div className="flex flex-col gap-5 w-full overflow-auto">
+        <div className="flex flex-wrap gap-5 justify-between items-center">
+          <Input placeholder="Search by title..." value={query} onChange={handleSearch} className="placeholder:text-gray-400" />
+          <Button startIcon={<Add />} onClick={handleAdd}>
+            Add
+          </Button>
+        </div>
+        <ListMovies />
       </div>
-      <ListMovies />
     </MainLayout>
   );
 };

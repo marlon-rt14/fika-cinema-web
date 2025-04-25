@@ -1,5 +1,5 @@
 import BACKGROUND from "@/assets/images/header.webp";
-import "../styles/header.css";
+import "./header.style.css";
 
 export const HeaderBg = () => {
   return (

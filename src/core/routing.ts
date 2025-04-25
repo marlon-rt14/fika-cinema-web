@@ -1,1 +1,1 @@
-export { useLocation, BrowserRouter, Navigate, Route, Routes, Outlet, Link } from "react-router";
+export { useLocation, useNavigate, BrowserRouter, Navigate, Route, Routes, Outlet, Link } from "react-router";

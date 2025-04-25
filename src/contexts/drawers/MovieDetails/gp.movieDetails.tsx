@@ -34,7 +34,7 @@ export const MovieDetailsProvider = ({ children }: IGlobalProps) => {
           // base: "data-[placement=right]:sm:m-2 data-[placement=left]:sm:m-2  rounded-medium rounded-2xl",
           // body: "border",
           base: "bg-gray-800/90 backdrop-blur-2xl rounded-l-2xl ",
-          backdrop: "bg-brand-primary-blue/50 backdrop-blur-xs rounded-2xl ",
+          backdrop: "bg-brand-primary-blue/50 backdrop-blur-xs ",
         }}
       >
         <DrawerContent className="">

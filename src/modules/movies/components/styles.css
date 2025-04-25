@@ -1,6 +1,6 @@
 .movie-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(clamp(200px, 25%, 225px), 1fr));
-  grid-template-rows: minmax(350px, 1fr);
+  grid-auto-rows: minmax(350px, 1fr);
   gap: 1rem;
 }

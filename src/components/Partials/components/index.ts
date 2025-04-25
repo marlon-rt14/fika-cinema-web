@@ -1,3 +1,2 @@
-export * from "./HeaderBg";
-export * from "./ButtonItem";
-export * from "./ButtonLink";
+export * from "./Header";
+export * from "./Admin";

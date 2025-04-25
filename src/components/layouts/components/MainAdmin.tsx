@@ -3,5 +3,5 @@ interface Props {
 }
 
 export const MainAdmin = ({ children }: Props) => {
-  return <main className="p-5  flex-1">{children}</main>;
+  return <main className="p-5  flex-[3] overflow-auto relative bg-white">{children}</main>;
 };

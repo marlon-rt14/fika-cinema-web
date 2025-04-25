@@ -34,6 +34,7 @@
       "@contexts": ["src/contexts/"],
       "@contexts/*": ["src/contexts/*"],
       "@models": ["src/models/*"],
+      "@hooks": ["src/hooks/*"],
 
       /* MODULES */
       "@modules/*": ["src/modules/*"],
