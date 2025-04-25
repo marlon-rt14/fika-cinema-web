@@ -13,7 +13,9 @@ export const getMovies = async (): Promise<Movie[]> => {
 export const postMovie = async (payload: PostMovie): Promise<Movie> => {
   // await sleep();
   const data = await fakeApi.get("/movies.json");
+
   const movies = getDataStore<Movie[]>("movies") || data.data;
+
   let lastMovie: Movie | undefined;
   if (movies.length > 0) {
     lastMovie = movies[movies.length - 1];
@@ -29,6 +31,7 @@ export const postMovie = async (payload: PostMovie): Promise<Movie> => {
   const castFiltered = castsList.filter((cast) => payload.cast.includes(cast.id));
 
   const newMovie = { ...payload, id: newId, rate: 0, genres: genresFiltered, cast: castFiltered };
+
   return toMovieModel(newMovie);
 };
 
