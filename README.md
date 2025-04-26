@@ -29,6 +29,7 @@ To set up and run this project locally, follow these steps:
   ```
 
   This will launch the application in your default browser at `http://localhost:5173`.
+  Alternatively, you can open the released version at `https://fika-cinema-web.vercel.app/movies` in your preferred web browser.
 
 > **Note:**  📝  
 >
