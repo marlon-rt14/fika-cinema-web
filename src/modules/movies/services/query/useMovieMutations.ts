@@ -1,25 +1,38 @@
 import { useEffect } from "@/core/base";
-import { useMutation } from "@tanstack/react-query";
-import { PostMovie, PutMovie, deleteMovie as deleteMovieRequest, patchRate as patchRateRequest, postMovie, putMovie } from "@movies/services/api";
 import { useStoreMovies } from "@/store";
+import { PostMovie, PutMovie, deleteMovie as deleteMovieRequest, patchRate as patchRateRequest, postMovie, putMovie } from "@movies/services/api";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 export const useMovieMutations = () => {
   const { createMovie: createMovieStore, updateMovie: updateMovieStore, deleteMovie: deleteMovieStore, patchRate: patchRateStore } = useStoreMovies();
+  const queryClient = useQueryClient();
 
   const createMovie = useMutation({
     mutationFn: (payload: PostMovie) => postMovie(payload),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["movies"] }); // Invalida la caché
+    },
   });
 
   const updateMovie = useMutation({
     mutationFn: ({ payload, id }: { payload: PutMovie; id: number }) => putMovie(payload, id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["movies"] }); // Invalida la caché
+    },
   });
 
   const deleteMovie = useMutation({
     mutationFn: (id: number) => deleteMovieRequest(id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["movies"] }); // Invalida la caché
+    },
   });
 
   const patchRate = useMutation({
     mutationFn: ({ rate, id }: { rate: number; id: number }) => patchRateRequest(rate, id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["movies"] }); // Invalida la caché
+    },
   });
 
   useEffect(() => {

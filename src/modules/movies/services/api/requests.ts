@@ -7,7 +7,8 @@ import { toMovieModel, toMoviesModel } from "@movies/services/api/adapters";
 export const getMovies = async (): Promise<Movie[]> => {
   await sleep();
   const data = await fakeApi.get("/movies.json");
-  return toMoviesModel(data.data);
+  const movies: Movie[] = getDataStore<Movie[]>("movies") || toMoviesModel(data.data);
+  return movies;
 };
 
 export const postMovie = async (payload: PostMovie): Promise<Movie> => {
