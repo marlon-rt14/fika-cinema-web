@@ -1,1 +1,98 @@
-[]
+[
+  {
+      "title": "The amazing spiderman",
+      "overview": "After Peter Parker is bitten by a genetically altered spider, he gains newfound, spider-like powers and ventures out to save the city from the machinations of a mysterious reptilian foe.",
+      "poster_path": "https://upload.wikimedia.org/wikipedia/en/e/e0/The_Amazing_Spider-Man_%28film%29_poster.jpg",
+      "release_date": "2025-04-19",
+      "rate": 2,
+      "genres": [
+          {
+              "id": 5,
+              "name": "Comedy"
+          },
+          {
+              "id": 6,
+              "name": "Crime"
+          },
+          {
+              "id": 7,
+              "name": "Drama"
+          },
+          {
+              "id": 9,
+              "name": "Fantasy"
+          },
+          {
+              "id": 11,
+              "name": "Action"
+          }
+      ],
+      "cast": [
+          {
+              "id": 6,
+              "name": "Diana Evans"
+          }
+      ],
+      "id": 1
+  },
+  {
+      "title": "The simpson",
+      "overview": "The simpson overview",
+      "poster_path": "https://elblogdemanu.com/los-simpsons-la-pelicula/poster.webp",
+      "release_date": "2023-01-01",
+      "rate": 2,
+      "genres": [
+          {
+              "id": 3,
+              "name": "Animation"
+          },
+          {
+              "id": 5,
+              "name": "Comedy"
+          }
+      ],
+      "cast": [
+          {
+              "id": 8,
+              "name": "Fiona Green"
+          },
+          {
+              "id": 9,
+              "name": "George Harris"
+          }
+      ],
+      "id": 2
+  },
+  {
+      "title": "Mission Imposible",
+      "overview": "Ethan Hunt and the IMF team must prevent terrorists from detonating three nuclear devices.",
+      "poster_path": "https://image.tmdb.org/t/p/w1280/khlcsYHr7Hi4Tkymc7UGDvcUcx.jpg",
+      "release_date": "2023-01-01",
+      "rate": 5,
+      "genres": [
+          {
+              "id": 2,
+              "name": "Adventure"
+          },
+          {
+              "id": 6,
+              "name": "Crime"
+          },
+          {
+              "id": 11,
+              "name": "Action"
+          }
+      ],
+      "cast": [
+          {
+              "id": 7,
+              "name": "Ethan Foster"
+          },
+          {
+              "id": 8,
+              "name": "Fiona Green"
+          }
+      ],
+      "id": 3
+  }
+]
